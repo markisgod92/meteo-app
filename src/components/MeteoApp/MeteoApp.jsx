@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { Button } from "react-bootstrap"
 import { Location } from "../location/Location"
+import { MeteoData } from "../meteo data/MeteoData"
 
 export const MeteoApp = () => {
     const [weatherData, setWeatherData] = useState({})
@@ -31,12 +32,9 @@ export const MeteoApp = () => {
                         locationData={weatherData.location}
                         conditionData={weatherData.current.condition}
                     />
-                    <div className="d-flex flex-column gap-3">
-                        <p>Last updated: {weatherData.current.last_updated}</p>
-                        <p>Temperature: {weatherData.current.temp_c}°</p>
-                        <p>Condition: {weatherData.current.condition.text}</p>
-                        <p>Wind: {weatherData.current.condition.wind_kph}km/h - {weatherData.current.condition.wind_degree}°</p>
-                    </div>
+                    <MeteoData 
+                        data={weatherData.current}
+                    />
                 </>
             )}
         </>
