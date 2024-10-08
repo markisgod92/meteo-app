@@ -25,7 +25,7 @@ export const Location = ({ isDarkMode, locationData, conditionData }) => {
                             <h2>{locationData.name}</h2>
                             <h4>{locationData.region} - {locationData.country}</h4>
                             <p className="m-0">{formatLat(locationData.lat)} - {formatLon(locationData.lon)}</p>
-                            <p className="m-0">Local Time: {locationData.localtime} - TZ: {locationData.tz_id}</p>
+                            <p className="m-0">Data e ora locali: {locationData.localtime} - TZ: {locationData.tz_id}</p>
                         </div>
                     </Col>
                 </Row>

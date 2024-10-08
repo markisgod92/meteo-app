@@ -20,12 +20,26 @@ export const MeteoData = ({ data }) => {
     return (
         <Container>
             <Row className="py-3">
-                <div className="d-flex justify-content-end">
+                <Col
+                    xs
+                    md={6}
+                >
+                    <div className="d-flex flex-wrap gap-2">
+                        <div>Ultimo aggiornamento:</div>
+                        <div>{data.last_updated}</div>
+                    </div>
+                </Col>
+                <Col
+                    xs
+                    md={6}
+                >
+                    <div className="d-flex justify-content-end">
                     <UnitsSwitch
                         metricUnits={metricUnits}
                         switchUnitsFc={switchUnits}
                     />
-                </div>
+                    </div>
+                </Col>
             </Row>
 
             <Row className="g-3">
