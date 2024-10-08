@@ -1,6 +1,8 @@
 import { useState } from "react"
 import { UnitsSwitch } from "../units switch/UnitsSwitch"
 import { Container, Row, Col } from "react-bootstrap"
+import { TemperatureComponent } from './temperature component/TemperatureComponent'
+import { WindComponent } from "./wind component/WindComponents"
 
 export const MeteoData = ({ data }) => {
     const [metricUnits, setMetricUnits] = useState(true)
@@ -21,17 +23,17 @@ export const MeteoData = ({ data }) => {
             </Row>
 
             <Row>
-                <Col>
-                    <Row>
-                        <h4>Wind</h4>
-                    </Row>
-                    <Row>
-                        <div className="d-flex flex-column gap-2">
-                            <div>Speed: {metricUnits ? `${data.wind_kph} km/h` : `${data.wind_mph} mph`}</div>
-                            <div>Direction: {data.wind_dir} {`(${data.wind_degree}°)`}</div>
-                            <div>Gusts: {metricUnits ? `${data.gust_kph} km/h` : `${data.gust_mph} mph`}</div>
-                        </div>
-                    </Row>
+            <Col xs md={4} lg={3}>
+                    <TemperatureComponent
+                        metricUnits={metricUnits}
+                        data={data}
+                    />
+                </Col>
+                <Col xs md={4} lg={3}>
+                    <WindComponent
+                        metricUnits={metricUnits}
+                        data={data}
+                    />
                 </Col>
             </Row>
         </Container>
