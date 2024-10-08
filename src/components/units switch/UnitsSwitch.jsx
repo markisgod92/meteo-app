@@ -1,3 +1,5 @@
+import './unitsswitch.css'
+
 export const UnitsSwitch = ({ metricUnits, switchUnitsFc }) => {
     return (
         <div

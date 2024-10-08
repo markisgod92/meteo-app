@@ -4,6 +4,8 @@ import { Container, Row, Col } from "react-bootstrap"
 import { TemperatureComponent } from './temperature component/TemperatureComponent'
 import { WindComponent } from "./wind component/WindComponents"
 import { PrecipitationsComponent } from './precipitations component/PrecipitationsComponent'
+import { PressureComponent } from "./pressure component/PressureComponent"
+import { HumidityComponent } from "./humidity component/HumidityComponent"
 
 export const MeteoData = ({ data }) => {
     const [metricUnits, setMetricUnits] = useState(true)
@@ -38,6 +40,18 @@ export const MeteoData = ({ data }) => {
                 </Col>
                 <Col xs md={4} lg={3}>
                     <PrecipitationsComponent
+                        metricUnits={metricUnits}
+                        data={data}
+                    />
+                </Col>
+                <Col xs md={4} lg={3}>
+                    <PressureComponent
+                        metricUnits={metricUnits}
+                        data={data}
+                    />
+                </Col>
+                <Col xs md={4} lg={3}>
+                    <HumidityComponent
                         metricUnits={metricUnits}
                         data={data}
                     />
