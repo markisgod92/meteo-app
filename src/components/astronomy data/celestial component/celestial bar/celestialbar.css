@@ -1,0 +1,23 @@
+.sun-bar-container {
+    position: relative;
+}
+
+.sun-bar {
+    height: 10px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.sun-indicator {
+    position: absolute;
+    top: -17px;
+    font-size: 1.8rem;
+    transform: translateX(-50%);
+}
+
+.peak-indicator {
+    position: absolute;
+    top: -17px;
+    font-size: 1.8rem;
+    transform: translateX(-50%);
+}

@@ -9,8 +9,9 @@ import { HumidityComponent } from "./humidity component/HumidityComponent"
 import { UvIndexComponent } from "./uvindex component/UvIndexComponent"
 import { CloudComponent } from "./cloud coverage component/CloudComponent"
 import { VisibilityComponent } from "./visibility component/VisibilityComponent"
+import { ForecastData } from '../forecast data/ForecastData'
 
-export const MeteoData = ({ data }) => {
+export const MeteoData = ({ data, forecastData }) => {
     const [metricUnits, setMetricUnits] = useState(true)
 
     const switchUnits = () => {
@@ -34,10 +35,10 @@ export const MeteoData = ({ data }) => {
                     md={6}
                 >
                     <div className="d-flex justify-content-end">
-                    <UnitsSwitch
-                        metricUnits={metricUnits}
-                        switchUnitsFc={switchUnits}
-                    />
+                        <UnitsSwitch
+                            metricUnits={metricUnits}
+                            switchUnitsFc={switchUnits}
+                        />
                     </div>
                 </Col>
             </Row>
@@ -74,12 +75,12 @@ export const MeteoData = ({ data }) => {
                     />
                 </Col>
                 <Col xs md={4} lg={3}>
-                    <UvIndexComponent 
+                    <UvIndexComponent
                         data={data}
                     />
                 </Col>
                 <Col xs md={4} lg={3}>
-                    <CloudComponent 
+                    <CloudComponent
                         data={data}
                     />
                 </Col>
@@ -88,6 +89,10 @@ export const MeteoData = ({ data }) => {
                         metricUnits={metricUnits}
                         data={data}
                     />
+                </Col>
+
+                <Col xs={12}>
+                    <ForecastData metricUnits={metricUnits} data={forecastData} />
                 </Col>
             </Row>
         </Container>
