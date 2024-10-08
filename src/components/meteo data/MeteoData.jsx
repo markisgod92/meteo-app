@@ -3,6 +3,7 @@ import { UnitsSwitch } from "../units switch/UnitsSwitch"
 import { Container, Row, Col } from "react-bootstrap"
 import { TemperatureComponent } from './temperature component/TemperatureComponent'
 import { WindComponent } from "./wind component/WindComponents"
+import { PrecipitationsComponent } from './precipitations component/PrecipitationsComponent'
 
 export const MeteoData = ({ data }) => {
     const [metricUnits, setMetricUnits] = useState(true)
@@ -22,8 +23,8 @@ export const MeteoData = ({ data }) => {
                 </div>
             </Row>
 
-            <Row>
-            <Col xs md={4} lg={3}>
+            <Row className="g-3">
+                <Col xs md={4} lg={3}>
                     <TemperatureComponent
                         metricUnits={metricUnits}
                         data={data}
@@ -31,6 +32,12 @@ export const MeteoData = ({ data }) => {
                 </Col>
                 <Col xs md={4} lg={3}>
                     <WindComponent
+                        metricUnits={metricUnits}
+                        data={data}
+                    />
+                </Col>
+                <Col xs md={4} lg={3}>
+                    <PrecipitationsComponent
                         metricUnits={metricUnits}
                         data={data}
                     />
