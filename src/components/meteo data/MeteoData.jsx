@@ -7,6 +7,8 @@ import { PrecipitationsComponent } from './precipitations component/Precipitatio
 import { PressureComponent } from "./pressure component/PressureComponent"
 import { HumidityComponent } from "./humidity component/HumidityComponent"
 import { UvIndexComponent } from "./uvindex component/UvIndexComponent"
+import { CloudComponent } from "./cloud coverage component/CloudComponent"
+import { VisibilityComponent } from "./visibility component/VisibilityComponent"
 
 export const MeteoData = ({ data }) => {
     const [metricUnits, setMetricUnits] = useState(true)
@@ -59,6 +61,17 @@ export const MeteoData = ({ data }) => {
                 </Col>
                 <Col xs md={4} lg={3}>
                     <UvIndexComponent 
+                        data={data}
+                    />
+                </Col>
+                <Col xs md={4} lg={3}>
+                    <CloudComponent 
+                        data={data}
+                    />
+                </Col>
+                <Col xs md={4} lg={3}>
+                    <VisibilityComponent
+                        metricUnits={metricUnits}
                         data={data}
                     />
                 </Col>
