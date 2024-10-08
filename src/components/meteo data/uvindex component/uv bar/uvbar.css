@@ -1,0 +1,36 @@
+.uv-bar-container {
+    position: relative;
+    width: 100%;
+    height: 20px;
+    border-radius: 10px;
+
+    background: linear-gradient(to right, 
+        green 0%, 
+        green 18%,  /* fino a UV 2 */
+        yellow 18%, 
+        yellow 45%, /* fino a UV 5 */
+        orange 45%, 
+        orange 64%, /* fino a UV 7 */
+        red 64%, 
+        red 91%,    /* fino a UV 10 */
+        purple 91%, /* da UV 11+ */
+        purple 100%
+    );
+}
+
+.uv-bar {
+    height: 100%;
+    width: 100%;
+}
+
+.uv-selector {
+    position: absolute;
+    top: -5px;
+    width: 10px;
+    height: 30px;
+    background-color: black;
+    border: 2px solid white;
+    transform: translateX(-50%);
+    transition: left 0.3s ease-in-out;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
