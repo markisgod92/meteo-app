@@ -1,48 +1,15 @@
+import lunarPhasesIt from '../../../utilities/moon-phases-IT.json'
+import lunarEmojis from '../../../utilities/moon-emojis.json'
+
 export const LunarPhaseComponent = ({ data }) => {
 
-    const phaseToIta = (phase) => {
-        const phaseITA = {
-            "New Moon": "Luna Nuova",
-            "Waxing Crescent": "Crescente",
-            "First Quarter": "Primo Quarto",
-            "Waxing Gibbous": "Gibbosa Crescente",
-            "Full Moon": "Luna Piena",
-            "Waning Gibbous": "Gibbosa Calante",
-            "Last Quarter": "Ultimo Quarto",
-            "Waning Crescent": "Crescente Calante"
-        };
-
-        return phaseITA[phase]
-    }
-
     const phaseToEmoji = (latitude, phase) => {
-        const northernEmisphere = {
-            "New Moon": "🌑",
-            "Waxing Crescent": "🌒",
-            "First Quarter": "🌓",
-            "Waxing Gibbous": "🌔",
-            "Full Moon": "🌕",
-            "Waning Gibbous": "🌖",
-            "Last Quarter": "🌗",
-            "Waning Crescent": "🌘"
-        }
+        const northernEmisphere = lunarEmojis.northern_emisphere
+        const southernEmisphere = lunarEmojis.southern_emisphere
 
-        const southernEmisphere = {
-            "New Moon": "🌑",
-            "Waxing Crescent": "🌘",
-            "First Quarter": "🌗",
-            "Waxing Gibbous": "🌖",
-            "Full Moon": "🌕",
-            "Waning Gibbous": "🌔",
-            "Last Quarter": "🌓",
-            "Waning Crescent": "🌒"
-        }
-
-        if (latitude >= 0) {
-            return northernEmisphere[phase]
-        } else {
-            return southernEmisphere[phase]
-        }
+        return latitude >= 0
+            ? northernEmisphere[phase]
+            : southernEmisphere[phase]
     }
 
     return (
@@ -53,7 +20,7 @@ export const LunarPhaseComponent = ({ data }) => {
             </div>
 
             <div className="d-flex justify-content-between align-items-center">
-                <div className="fs-3 ps-3">{phaseToIta(data.astronomy.moon_phase)}</div>
+                <div className="fs-3 ps-3">{lunarPhasesIt[data.astronomy.moon_phase]}</div>
                 <div className="fs-1">{phaseToEmoji(data.location.lat, data.astronomy.moon_phase)}</div>
             </div>
 
