@@ -1,6 +1,6 @@
-export const LunarPhaseComponent = ({data}) => {
+export const LunarPhaseComponent = ({ data }) => {
 
-    function phaseToIta(phase) {
+    const phaseToIta = (phase) => {
         const phaseITA = {
             "New Moon": "Luna Nuova",
             "Waxing Crescent": "Crescente",
@@ -11,8 +11,38 @@ export const LunarPhaseComponent = ({data}) => {
             "Last Quarter": "Ultimo Quarto",
             "Waning Crescent": "Crescente Calante"
         };
-    
+
         return phaseITA[phase]
+    }
+
+    const phaseToEmoji = (latitude, phase) => {
+        const northernEmisphere = {
+            "New Moon": "🌑",
+            "Waxing Crescent": "🌒",
+            "First Quarter": "🌓",
+            "Waxing Gibbous": "🌔",
+            "Full Moon": "🌕",
+            "Waning Gibbous": "🌖",
+            "Last Quarter": "🌗",
+            "Waning Crescent": "🌘"
+        }
+
+        const southernEmisphere = {
+            "New Moon": "🌑",
+            "Waxing Crescent": "🌘",
+            "First Quarter": "🌗",
+            "Waxing Gibbous": "🌖",
+            "Full Moon": "🌕",
+            "Waning Gibbous": "🌔",
+            "Last Quarter": "🌓",
+            "Waning Crescent": "🌒"
+        }
+
+        if (latitude >= 0) {
+            return northernEmisphere[phase]
+        } else {
+            return southernEmisphere[phase]
+        }
     }
 
     return (
@@ -22,13 +52,16 @@ export const LunarPhaseComponent = ({data}) => {
                 <h4>Fase Lunare</h4>
             </div>
 
-            <div className="fs-3 ps-3">{phaseToIta(data.moon_phase)}</div>
+            <div className="d-flex justify-content-between align-items-center">
+                <div className="fs-3 ps-3">{phaseToIta(data.astronomy.moon_phase)}</div>
+                <div className="fs-1">{phaseToEmoji(data.location.lat, data.astronomy.moon_phase)}</div>
+            </div>
 
             <div className="d-flex justify-content-between align-items-center py-3 ">
                 <div>Illuminazione</div>
-                <div>{data.moon_illumination} %</div>
+                <div>{data.astronomy.moon_illumination} %</div>
             </div>
-            
+
         </div>
     )
 }

@@ -42,7 +42,7 @@ export const AstronomySection = () => {
                 md={4}
             >
                 <LunarPhaseComponent
-                    data={data.astronomy}
+                    data={data}
                 />
             </Col>
         </Row>
