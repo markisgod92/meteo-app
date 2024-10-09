@@ -1,7 +1,12 @@
 import { Col, Container, Row } from "react-bootstrap"
-import { WeatherIcon } from "../weather icon/WeatherIcon"
+import { WeatherIcon } from "./weather icon/WeatherIcon"
+import { useContext } from "react"
+import { DataContext } from "../../context/DataContext"
 
-export const Location = ({ isDarkMode, locationData, conditionData }) => {
+export const Location = () => {
+    const { data } = useContext(DataContext)
+
+
     const formatLat = (lat) => {
         return lat > 0 ? `${lat} N` : `${lat.slice(1)} S`
     }
@@ -11,21 +16,21 @@ export const Location = ({ isDarkMode, locationData, conditionData }) => {
     }
 
     return (
-        <section className={isDarkMode ? 'bg-dark text-white' : ''}>
+        <section className={!data.isDay ? 'bg-dark text-white' : ''}>
             <Container>
                 <Row className="py-3">
                     <Col xs={3}>
                         <WeatherIcon
-                            isNight={isDarkMode}
-                            conditionData={conditionData}
+                            isNight={!data.isDay}
+                            conditionData={data.current.condition}
                         />
                     </Col>
                     <Col xs={9}>
                         <div className="text-end d-flex flex-column gap-3">
-                            <h2>{locationData.name}</h2>
-                            <h4>{locationData.region} - {locationData.country}</h4>
-                            <p className="m-0">{formatLat(locationData.lat)} - {formatLon(locationData.lon)}</p>
-                            <p className="m-0">Data e ora locali: {locationData.localtime} - TZ: {locationData.tz_id}</p>
+                            <h2>{data.location.name}</h2>
+                            <h4>{data.location.region} - {data.location.country}</h4>
+                            <p className="m-0">{formatLat(data.location.lat)} - {formatLon(data.location.lon)}</p>
+                            <p className="m-0">Data e ora locali: {data.localtime} - TZ: {data.location.tz_id}</p>
                         </div>
                     </Col>
                 </Row>
