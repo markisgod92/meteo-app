@@ -1,0 +1,47 @@
+{
+    "co": [
+      { "maxValue": 4400, "level": "Buona" },
+      { "maxValue": 9400, "level": "Moderata" },
+      { "maxValue": "Infinity", "level": "Nociva" }
+    ],
+    "no2": [
+      { "maxValue": 50, "level": "Buona" },
+      { "maxValue": 100, "level": "Moderata" },
+      { "maxValue": "Infinity", "level": "Nociva" }
+    ],
+    "o3": [
+      { "maxValue": 100, "level": "Buona" },
+      { "maxValue": 160, "level": "Moderata" },
+      { "maxValue": "Infinity", "level": "Nociva" }
+    ],
+    "so2": [
+      { "maxValue": 20, "level": "Buona" },
+      { "maxValue": 75, "level": "Moderata" },
+      { "maxValue": "Infinity", "level": "Nociva" }
+    ],
+    "pm2_5": [
+      { "maxValue": 25, "level": "Buona" },
+      { "maxValue": 50, "level": "Moderata" },
+      { "maxValue": "Infinity", "level": "Nociva" }
+    ],
+    "pm10": [
+      { "maxValue": 50, "level": "Buona" },
+      { "maxValue": 100, "level": "Moderata" },
+      { "maxValue": "Infinity", "level": "Nociva" }
+    ],
+    "epa": {
+        "1": "Buona",
+        "2": "Moderata",
+        "3": "Nociva per soggetti a rischio",
+        "4": "Nociva",
+        "5": "Molto nociva",
+        "6": "Pericolosa"
+    },
+    "defra": [
+      { "maxValue": 3, "level": "Buona" },
+      { "maxValue": 6, "level": "Moderata" },
+      { "maxValue": 9, "level": "Nociva" },
+      { "maxValue": 10, "level": "Pericolosa" }
+    ]
+  }
+  

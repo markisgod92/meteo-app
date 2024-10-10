@@ -9,7 +9,7 @@ export const DataContextProvider = ({ children }) => {
 
     const API_KEY = import.meta.env.VITE_API_KEY
     const searchURL = `http://api.weatherapi.com/v1//search.json?key=${API_KEY}&lang=it&q=`
-    const forecastURL = `http://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&lang=it&q=`
+    const forecastURL = `http://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&aqi=yes&lang=it&q=`
     const astronomyURL = `http://api.weatherapi.com/v1/astronomy.json?key=${API_KEY}&lang=it&q=`
 
     const searchCity = async (query) => {
@@ -39,6 +39,7 @@ export const DataContextProvider = ({ children }) => {
                 localtime: forecastData.location.localtime,
                 isDay: forecastData.current.is_day,
                 current: forecastData.current,
+                airQuality: forecastData.current.air_quality,
                 today: forecastData.forecast.forecastday[0].hour,
                 astronomy: astronomyData.astronomy.astro
             }
