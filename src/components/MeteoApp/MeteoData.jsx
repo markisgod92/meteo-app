@@ -1,7 +1,6 @@
-import { useState, useContext } from "react"
+import { useContext } from "react"
 import { UnitsSwitch } from "../units switch/UnitsSwitch"
 import { Container, Row, Col } from "react-bootstrap"
-
 import { CurrentSection } from "../sections/CurrentSection"
 import { DataContext } from "../../context/DataContext"
 import { ForecastData } from "../sections/ForecastData"
@@ -10,12 +9,7 @@ import { AirQualityComponent } from "../cards/meteo data/air quality component/A
 import { AlertSection } from "../sections/AlertSection"
 
 export const MeteoData = () => {
-    const [metricUnits, setMetricUnits] = useState(true)
-    const { data } = useContext(DataContext)
-
-    const switchUnits = () => {
-        setMetricUnits(prev => !prev)
-    }
+    const { data, metricUnits } = useContext(DataContext)
 
     return (
         <Container>
@@ -36,7 +30,6 @@ export const MeteoData = () => {
                     <div className="d-flex justify-content-end">
                         <UnitsSwitch
                             metricUnits={metricUnits}
-                            switchUnitsFc={switchUnits}
                         />
                     </div>
                 </Col>

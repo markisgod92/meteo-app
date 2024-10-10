@@ -12,3 +12,15 @@ export const convertToItaDate = (isoString) => {
 
     return new Intl.DateTimeFormat('it-IT', options).format(date);
 }
+
+export const formatLat = (lat) => {
+    return lat > 0 ? `${lat} N` : `${Math.abs(lat)} S`
+}
+
+export const formatLon = (lon) => {
+    return lon > 0 ? `${lon} E` : `${Math.abs(lon)} W`
+}
+
+export const pressureToText = (metricUnits, value) => {
+    return value >= (metricUnits ? 1013 : 2992) ? 'Alta pressione' : 'Bassa pressione';
+}

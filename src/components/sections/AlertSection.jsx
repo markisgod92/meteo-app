@@ -14,9 +14,9 @@ export const AlertSection = () => {
                     <h4>Allerte meteo</h4>
                 </div>
             </Col>
-            <Row className="px-3 pt-3">
+            <ul className="px-3 pt-3">
                 {data.alerts.map((alert, i) => (
-                    <Col xs={12} key={i}>
+                    <li xs={12} key={i} className="pt-3">
                         <div className="d-flex flex-column gap-1">
                             <div className="d-flex justify-content-between">
                                 <h6>{alert.headline}</h6>
@@ -26,9 +26,9 @@ export const AlertSection = () => {
                             {alert.description && <p>{alert.description}</p>}
                             {alert.instruction && <p>{alert.instruction}</p>}
                         </div>
-                    </Col>
+                    </li>
                 ))}
-            </Row>
+            </ul>
         </Row>
     )
 }

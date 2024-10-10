@@ -6,11 +6,16 @@ export const DataContextProvider = ({ children }) => {
     const [queriedCities, setQueriedCities] = useState([])
     const [data, setData] = useState(null)
     const [isLoading, setLoading] = useState(false)
+    const [metricUnits, setMetricUnits] = useState(true)
 
     const API_KEY = import.meta.env.VITE_API_KEY
     const searchURL = `http://api.weatherapi.com/v1//search.json?key=${API_KEY}&lang=it&q=`
     const forecastURL = `http://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&aqi=yes&alerts=yes&lang=it&q=`
     const astronomyURL = `http://api.weatherapi.com/v1/astronomy.json?key=${API_KEY}&lang=it&q=`
+
+    const switchUnits = () => {
+        setMetricUnits(prev => !prev)
+    }
 
     const searchCity = async (query) => {
         try {
@@ -55,7 +60,7 @@ export const DataContextProvider = ({ children }) => {
 
     return (
         <DataContext.Provider
-            value={{ searchCity, setQueriedCities, queriedCities, data, fetchData, isLoading }}
+            value={{ searchCity, setQueriedCities, queriedCities, data, fetchData, isLoading, metricUnits, switchUnits }}
         >
             { children }
         </DataContext.Provider>

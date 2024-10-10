@@ -23,6 +23,3 @@ dist-ssr
 *.sln
 *.sw?
 .env
-response.json
-astronomy.json
-autocomplete.json
