@@ -7,6 +7,7 @@ import { DataContext } from "../../context/DataContext"
 import { ForecastData } from "../sections/ForecastData"
 import { AstronomySection } from "../sections/AstronomySection"
 import { AirQualityComponent } from "../cards/meteo data/air quality component/AirQualityComponent"
+import { AlertSection } from "../sections/AlertSection"
 
 export const MeteoData = () => {
     const [metricUnits, setMetricUnits] = useState(true)
@@ -41,6 +42,10 @@ export const MeteoData = () => {
                 </Col>
             </Row>
 
+            {data.alerts.length > 0 && (
+                <AlertSection />
+            )}
+            
             <CurrentSection metricUnits={metricUnits} />
 
             <ForecastData metricUnits={metricUnits} />
