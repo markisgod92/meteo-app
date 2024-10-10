@@ -8,11 +8,11 @@ export const Location = () => {
 
 
     const formatLat = (lat) => {
-        return lat > 0 ? `${lat} N` : `${lat.slice(1)} S`
+        return lat > 0 ? `${lat} N` : `${Math.abs(lat)} S`
     }
 
     const formatLon = (lon) => {
-        return lon > 0 ? `${lon} E` : `${lon.slice(1)} W`
+        return lon > 0 ? `${lon} E` : `${Math.abs(lon)} W`
     }
 
     return (
