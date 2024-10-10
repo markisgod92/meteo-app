@@ -3,12 +3,24 @@ import { createContext, useState } from "react";
 export const DataContext = createContext()
 
 export const DataContextProvider = ({ children }) => {
+    const [queriedCities, setQueriedCities] = useState([])
     const [data, setData] = useState(null)
     const [isLoading, setLoading] = useState(false)
 
     const API_KEY = import.meta.env.VITE_API_KEY
+    const searchURL = `http://api.weatherapi.com/v1//search.json?key=${API_KEY}&lang=it&q=`
     const forecastURL = `http://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&aqi=yes&lang=it&q=`
     const astronomyURL = `http://api.weatherapi.com/v1/astronomy.json?key=${API_KEY}&lang=it&q=`
+
+    const searchCity = async (query) => {
+        try {
+            const response = await fetch(searchURL + query)
+            const data = await response.json()
+            setQueriedCities(data)
+        } catch (error) {
+            console.error('Search city error', error)
+        }
+    }
 
     const fetchData = async (location) => {
         setLoading(true)
@@ -43,7 +55,7 @@ export const DataContextProvider = ({ children }) => {
 
     return (
         <DataContext.Provider
-            value={{ data, fetchData, isLoading }}
+            value={{ searchCity, setQueriedCities, queriedCities, data, fetchData, isLoading }}
         >
             { children }
         </DataContext.Provider>
