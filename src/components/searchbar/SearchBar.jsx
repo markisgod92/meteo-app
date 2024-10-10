@@ -1,33 +1,70 @@
 import { useContext, useState } from "react"
-import { Container, Form, Row, Button } from "react-bootstrap"
+import { Container, Form, Row, Button, Dropdown } from "react-bootstrap"
 import { DataContext } from "../../context/DataContext"
 
 export const SearchBar = () => {
     const [cityInput, setCityInput] = useState('')
-    const { searchCity } = useContext(DataContext)
+    const { searchCity, queriedCities, setQueriedCities, fetchData } = useContext(DataContext)
+    const [debounceTimer, setDebounceTimer] = useState(null)
+
+    const debounceSearch = (inputValue) => {
+        if (debounceTimer) {
+            clearTimeout(debounceTimer)
+        }
+
+        const newTimer = setTimeout(() => {
+            if (inputValue) {
+                searchCity(inputValue)
+            }
+        }, 500)
+
+        setDebounceTimer(newTimer)
+    }
+
 
     const handleCityInput = (e) => {
-        setCityInput(e.target.value)
+        const value = e.target.value
+        setCityInput(value)
+        debounceSearch(value)
+    }
+
+    const showData = (value) => {
+        setQueriedCities([])
+        setCityInput('')
+        fetchData(value)
     }
 
     return (
-        <nav className="py-4">
+        <nav className="py-4 px-2">
             <Container>
-                <Row>
-                    <div className="d-flex justify-content-center align-items-center gap-3">
+                <Row className="position-relative">
                         <Form.Control
+                        className="w-100"
                             type="text"
                             placeholder="Cerca una città..."
                             value={cityInput}
                             onChange={(e) => handleCityInput(e)}
                         />
-                        <Button
-                            variant='primary'
-                            onClick={() => searchCity(cityInput)}
-                        >
-                            Cerca
-                        </Button>
-                    </div>
+
+                        {queriedCities.length !== 0 && (
+                            <Dropdown.Menu show className='position-absolute top-100 w-100'>
+                                {queriedCities.map((city, i) => (
+                                    <Dropdown.Item
+                                        key={i}
+                                        onClick={() => showData(city.url)}
+                                    >
+                                        <ul className="city-results d-flex gap-2 list-unstyled m-0 py-1">
+                                            <li>{city.name}</li>
+                                            <li>-</li>
+                                            <li>{city.region}</li>
+                                            <li>-</li>
+                                            <li>{city.country}</li>
+                                        </ul>
+                                        
+                                    </Dropdown.Item>
+                                ))}
+                            </Dropdown.Menu>
+                        )}
                 </Row>
             </Container>
         </nav>

@@ -7,9 +7,6 @@ export const DataContextProvider = ({ children }) => {
     const [data, setData] = useState(null)
     const [isLoading, setLoading] = useState(false)
 
-    console.log(queriedCities)
-    // ricerca da searchbar imposta queriedCities
-
     const API_KEY = import.meta.env.VITE_API_KEY
     const searchURL = `http://api.weatherapi.com/v1//search.json?key=${API_KEY}&lang=it&q=`
     const forecastURL = `http://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&lang=it&q=`
@@ -57,7 +54,7 @@ export const DataContextProvider = ({ children }) => {
 
     return (
         <DataContext.Provider
-            value={{ searchCity, data, fetchData, isLoading }}
+            value={{ searchCity, setQueriedCities, queriedCities, data, fetchData, isLoading }}
         >
             { children }
         </DataContext.Provider>

@@ -1,5 +1,4 @@
-import { useContext, useState } from "react"
-import { Button } from "react-bootstrap"
+import { useContext} from "react"
 import { Location } from "../location/Location"
 import { MeteoData } from "./MeteoData"
 import { DataContext, DataContextProvider } from "../../context/DataContext"
@@ -11,10 +10,6 @@ export const MeteoApp = () => {
 
     return (
         <>
-            <Button onClick={() => fetchData('jesolo')}>
-                fetch
-            </Button>
-
             <SearchBar />
 
             {data && (
