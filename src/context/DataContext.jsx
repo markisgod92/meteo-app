@@ -7,7 +7,7 @@ export const DataContextProvider = ({ children }) => {
     const [isLoading, setLoading] = useState(false)
 
     const API_KEY = import.meta.env.VITE_API_KEY
-    const forecastURL = `http://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&lang=it&q=`
+    const forecastURL = `http://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&aqi=yes&lang=it&q=`
     const astronomyURL = `http://api.weatherapi.com/v1/astronomy.json?key=${API_KEY}&lang=it&q=`
 
     const fetchData = async (location) => {
@@ -27,6 +27,7 @@ export const DataContextProvider = ({ children }) => {
                 localtime: forecastData.location.localtime,
                 isDay: forecastData.current.is_day,
                 current: forecastData.current,
+                airQuality: forecastData.current.air_quality,
                 today: forecastData.forecast.forecastday[0].hour,
                 astronomy: astronomyData.astronomy.astro
             }
