@@ -11,7 +11,7 @@ export const AstronomySection = () => {
         <Row className="pt-3 g-3">
             <Col
                 xs={12}
-                md={6}
+                md={4}
                 lg={4}
             >
                 <CelestialComponent
@@ -25,7 +25,7 @@ export const AstronomySection = () => {
             </Col>
             <Col
                 xs={12}
-                md={6}
+                md={4}
                 lg={4}
             >
                 <CelestialComponent

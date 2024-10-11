@@ -10,14 +10,14 @@ export const Location = () => {
     return (
         <section className={!data.isDay ? 'bg-dark text-white' : ''}>
             <Container>
-                <Row className="py-3">
-                    <Col xs={3}>
+                <Row className="py-3 flex-column-reverse flex-md-row">
+                    <Col xs={12} md={8}>
                         <WeatherIcon
                             isNight={!data.isDay}
                             conditionData={data.current.condition}
                         />
                     </Col>
-                    <Col xs={9}>
+                    <Col xs={12} md={4}>
                         <div className="text-end d-flex flex-column gap-3">
                             <h2>{data.location.name}</h2>
                             <h4>{data.location.region} - {data.location.country}</h4>

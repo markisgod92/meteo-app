@@ -15,47 +15,47 @@ export const CurrentSection = ({ metricUnits }) => {
 
     return (
         <Row className="pt-3 g-3">
-            <Col xs md={4} lg={3}>
+            <Col xs={12} md={6} lg={3}>
                 <TemperatureComponent
                     metricUnits={metricUnits}
                     data={data.current}
                 />
             </Col>
-            <Col xs md={4} lg={3}>
+            <Col xs={12} md={6} lg={3}>
                 <WindComponent
                     metricUnits={metricUnits}
                     data={data.current}
                 />
             </Col>
-            <Col xs md={4} lg={3}>
+            <Col xs={6} md={4} lg={3}>
                 <PrecipitationsComponent
                     metricUnits={metricUnits}
                     data={data.current}
                 />
             </Col>
-            <Col xs md={4} lg={3}>
+            <Col xs={6} md={4} lg={3}>
                 <PressureComponent
                     metricUnits={metricUnits}
                     data={data.current}
                 />
             </Col>
-            <Col xs md={4} lg={3}>
+            <Col xs={12} md={4} lg={3}>
                 <HumidityComponent
                     metricUnits={metricUnits}
                     data={data.current}
                 />
             </Col>
-            <Col xs md={4} lg={3}>
+            <Col xs={12} md={4} lg={3}>
                 <UvIndexComponent
                     data={data.current}
                 />
             </Col>
-            <Col xs md={4} lg={3}>
+            <Col xs={6} md={4} lg={3}>
                 <CloudComponent
                     data={data.current}
                 />
             </Col>
-            <Col xs md={4} lg={3}>
+            <Col xs={6} md={4} lg={3}>
                 <VisibilityComponent
                     metricUnits={metricUnits}
                     data={data.current}
