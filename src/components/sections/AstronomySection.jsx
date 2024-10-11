@@ -19,8 +19,6 @@ export const AstronomySection = () => {
                     icon={'sun'}
                     riseTime={data.astronomy.sunrise}
                     setTime={data.astronomy.sunset}
-                    isUp={data.astronomy.is_sun_up}
-                    currentTime={data.localtime}
                 />
             </Col>
             <Col
@@ -33,8 +31,6 @@ export const AstronomySection = () => {
                     icon={'moon'}
                     riseTime={data.astronomy.moonrise}
                     setTime={data.astronomy.moonset}
-                    isUp={data.astronomy.is_moon_up}
-                    currentTime={data.localtime}
                 />
             </Col>
             <Col
