@@ -62,7 +62,7 @@ export const DataContextProvider = ({ children }) => {
         <DataContext.Provider
             value={{ searchCity, setQueriedCities, queriedCities, data, fetchData, isLoading, metricUnits, switchUnits }}
         >
-            { children }
+            {children}
         </DataContext.Provider>
     )
 }

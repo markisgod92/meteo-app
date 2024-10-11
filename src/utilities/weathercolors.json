@@ -1,0 +1,174 @@
+{
+    "day": {
+        "Soleggiato": {
+            "background": "#87CEEB",
+            "accent": "#FFD700"
+        },
+        "Parzialmente nuvoloso": {
+            "background": "#ADD8E6",
+            "accent": "#F0E68C"
+        },
+        "Nuvoloso": {
+            "background": "#B0C4DE",
+            "accent": "#778899"
+        },
+        "Cielo coperto": {
+            "background": "#B0C4DE",
+            "accent": "#778899"
+        },
+        "Nebbia": {
+            "background": "#E0E0E0",
+            "accent": "#C0C0C0"
+        },
+        "Possibili piogge sparse": {
+            "background": "#A9A9A9",
+            "accent": "#4682B4"
+        },
+        "Pioggerella leggera": {
+            "background": "#A9A9A9",
+            "accent": "#4682B4"
+        },
+        "Pioggia leggera": {
+            "background": "#A9A9A9",
+            "accent": "#4682B4"
+        },
+        "Pioggia moderata": {
+            "background": "#808080",
+            "accent": "#4682B4"
+        },
+        "Pioggia intensa": {
+            "background": "#696969",
+            "accent": "#4682B4"
+        },
+        "Possibile neve a tratti": {
+            "background": "#F0F8FF",
+            "accent": "#B0E0E6"
+        },
+        "Neve leggera": {
+            "background": "#F0F8FF",
+            "accent": "#B0E0E6"
+        },
+        "Neve moderata": {
+            "background": "#F0F8FF",
+            "accent": "#B0E0E6"
+        },
+        "Neve intensa": {
+            "background": "#F0F8FF",
+            "accent": "#B0E0E6"
+        },
+        "Possibili temporali": {
+            "background": "#696969",
+            "accent": "#FFD700"
+        },
+        "Rovescio di pioggia leggera": {
+            "background": "#A9A9A9",
+            "accent": "#4682B4"
+        },
+        "Rovescio di pioggia moderata o forte": {
+            "background": "#696969",
+            "accent": "#4682B4"
+        },
+        "Rovescio di pioggia torrenziale": {
+            "background": "#505050",
+            "accent": "#4682B4"
+        },
+        "Rovescio di neve leggera": {
+            "background": "#F0F8FF",
+            "accent": "#B0E0E6"
+        },
+        "Rovescio di neve moderata o forte": {
+            "background": "#F0F8FF",
+            "accent": "#B0E0E6"
+        },
+        "Foschia": {
+            "background": "#E0E0E0",
+            "accent": "#C0C0C0"
+        }
+    },
+    "night": {
+        "Soleggiato": {
+            "background": "#191970",
+            "accent": "#F0E68C"
+        },
+        "Parzialmente nuvoloso": {
+            "background": "#2C3E50",
+            "accent": "#D3D3D3"
+        },
+        "Nuvoloso": {
+            "background": "#708090",
+            "accent": "#A9A9A9"
+        },
+        "Cielo coperto": {
+            "background": "#708090",
+            "accent": "#A9A9A9"
+        },
+        "Nebbia": {
+            "background": "#2F4F4F",
+            "accent": "#C0C0C0"
+        },
+        "Possibili piogge sparse": {
+            "background": "#2F4F4F",
+            "accent": "#00CED1"
+        },
+        "Pioggerella leggera": {
+            "background": "#2F4F4F",
+            "accent": "#00CED1"
+        },
+        "Pioggia leggera": {
+            "background": "#2F4F4F",
+            "accent": "#00CED1"
+        },
+        "Pioggia moderata": {
+            "background": "#1C1C1C",
+            "accent": "#00CED1"
+        },
+        "Pioggia intensa": {
+            "background": "#000000",
+            "accent": "#00CED1"
+        },
+        "Possibile neve a tratti": {
+            "background": "#DCDCDC",
+            "accent": "#F5FFFA"
+        },
+        "Neve leggera": {
+            "background": "#DCDCDC",
+            "accent": "#F5FFFA"
+        },
+        "Neve moderata": {
+            "background": "#DCDCDC",
+            "accent": "#F5FFFA"
+        },
+        "Neve intensa": {
+            "background": "#DCDCDC",
+            "accent": "#F5FFFA"
+        },
+        "Possibili temporali": {
+            "background": "#000000",
+            "accent": "#FFD700"
+        },
+        "Rovescio di pioggia leggera": {
+            "background": "#2F4F4F",
+            "accent": "#00CED1"
+        },
+        "Rovescio di pioggia moderata o forte": {
+            "background": "#1C1C1C",
+            "accent": "#00CED1"
+        },
+        "Rovescio di pioggia torrenziale": {
+            "background": "#0A0A0A",
+            "accent": "#00CED1"
+        },
+        "Rovescio di neve leggera": {
+            "background": "#DCDCDC",
+            "accent": "#F5FFFA"
+        },
+        "Rovescio di neve moderata o forte": {
+            "background": "#DCDCDC",
+            "accent": "#F5FFFA"
+        },
+        "Foschia": {
+            "background": "#2F4F4F",
+            "accent": "#C0C0C0"
+        }
+    }
+}
