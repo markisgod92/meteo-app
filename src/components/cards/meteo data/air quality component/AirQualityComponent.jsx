@@ -21,7 +21,7 @@ export const AirQualityComponent = ({ data }) => {
     }
 
     return (
-        <Row className="h-100 border border-1 border-dark rounded-4 p-4 mt-3">
+        <Row className="card-component h-100 rounded-4 p-4 mt-3">
             <div className="d-flex gap-3 align-items-baseline">
                 <i className="bi bi-lungs fs-3"></i>
                 <h4>Qualità dell'aria</h4>

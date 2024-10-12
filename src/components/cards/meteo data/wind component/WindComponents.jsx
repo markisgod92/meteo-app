@@ -1,6 +1,6 @@
 export const WindComponent = ({ metricUnits, data }) => {
     return (
-        <div className="h-100 d-flex flex-column gap-2 border border-1 border-dark rounded-4 p-4">
+        <div className="card-component h-100 d-flex flex-column gap-2 rounded-4 p-4">
             <div className="d-flex gap-3 align-items-baseline">
                 <i className="bi bi-wind fs-3"></i>
                 <h4>Vento</h4>

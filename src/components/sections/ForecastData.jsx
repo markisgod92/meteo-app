@@ -31,7 +31,7 @@ export const ForecastData = ({ metricUnits }) => {
 
     return (
         <Row className="pt-3 g-3">
-            <div className="border border-1 border-dark rounded-4 p-4">
+            <div className="card-component rounded-4 p-4">
                 <Row>
                     {data.today.map((item, index) => {
                         if (index % interval === 0) {

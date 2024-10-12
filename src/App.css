@@ -1,0 +1,55 @@
+.card-component {
+    background-color: rgba(0, 0, 0, 0.125);
+    color: white;
+    box-shadow: 0 0 10px black;
+}
+
+.day-sunny {
+    background-color: rgba(102, 199, 251, 0.7);
+    color: white;
+}
+
+.day-cloudy {
+    background-color: rgba(173, 216, 230, 0.7);
+    color: white;
+}
+
+.day-rainy {
+    background-color: rgba(177, 196, 204, 0.7);
+    color: white;
+}
+
+.day-snowy {
+   background-color: rgba(240, 250, 255, 0.7);
+   color: rgb(115, 115, 115);
+}
+
+.day-stormy {
+    background-color: rgba(105, 105, 105, 0.7);
+    color: white;
+}
+
+.night-clear {
+    background-color: rgba(30, 41, 88, 0.7);
+    color: white;
+}
+
+.night-cloudy {
+    background-color: rgba(50, 50, 50, 0.7);
+    color: white;
+}
+
+.night-rainy {
+    background-color: rgba(25, 25, 112, 0.7);
+    color: white;
+}
+
+.night-snowy {
+    background-color: rgba(97, 92, 126, 0.7);
+    color: white;
+}
+
+.night-stormy {
+    background-color: rgba(41, 32, 47, 0.7);
+    color: white;
+}

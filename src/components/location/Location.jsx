@@ -8,7 +8,7 @@ export const Location = () => {
     const { data } = useContext(DataContext)
 
     return (
-        <section className={!data.isDay ? 'bg-dark text-white' : ''}>
+        <section>
             <Container>
                 <Row className="py-3 flex-column-reverse flex-md-row">
                     <Col xs={12} md={8}>
