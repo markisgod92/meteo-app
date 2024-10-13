@@ -11,14 +11,14 @@ export const UnitsSwitch = () => {
             onClick={switchUnits}
         >
             <div 
-                className={`p-3 rounded-3 d-flex justify-content-center align-items-center ${
+                className={`p-2 rounded-3 d-flex justify-content-center align-items-center ${
                     metricUnits ? "bg-secondary-subtle text-dark border border-3 border-dark" : "text-white"
                 }`}
             >
                 <div>metric</div>
             </div>
             <div 
-                className={`p-3 rounded-3 d-flex justify-content-center align-items-center ${
+                className={`p-2 rounded-3 d-flex justify-content-center align-items-center ${
                     metricUnits ? "text-white" : "bg-secondary-subtle text-dark border border-3 border-dark"
                 }`}
             >

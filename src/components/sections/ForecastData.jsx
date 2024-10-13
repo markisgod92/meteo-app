@@ -30,21 +30,23 @@ export const ForecastData = ({ metricUnits }) => {
     }, []);
 
     return (
-        <Row className="pt-3 g-3">
-            <div className="card-component rounded-4 p-4">
-                <Row>
-                    {data.today.map((item, index) => {
-                        if (index % interval === 0) {
-                            return (
-                                <Col key={index}>
-                                    <ForecastHourComponent metricUnits={metricUnits} data={item} />
-                                </Col>
-                            );
-                        }
-                        return null;
-                    })}
-                </Row>
-            </div>
-        </Row>
+        <div className="pt-3">
+            <Row>
+                <div className="card-component rounded-4 p-4">
+                    <Row>
+                        {data.today.map((item, index) => {
+                            if (index % interval === 0) {
+                                return (
+                                    <Col key={index}>
+                                        <ForecastHourComponent metricUnits={metricUnits} data={item} />
+                                    </Col>
+                                );
+                            }
+                            return null;
+                        })}
+                    </Row>
+                </div>
+            </Row>
+        </div>
     );
 };

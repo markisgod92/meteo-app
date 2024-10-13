@@ -6,11 +6,11 @@ export const TemperatureComponent = ({ metricUnits, data }) => {
                 <h4>Temperatura</h4>
             </div>
 
-            <div className="d-flex justify-content-between align-items-center py-3 border-bottom border-1 border-dark">
+            <div className="d-flex justify-content-between align-items-center py-3 border-bottom border-1">
                 <div>Temperatura</div>
                 <div>{metricUnits ? `${data.temp_c}°C` : `${data.temp_f}°F`}</div>
             </div>
-            <div className="d-flex justify-content-between align-items-center py-3 border-bottom border-1 border-dark">
+            <div className="d-flex justify-content-between align-items-center py-3 border-bottom border-1">
                 <div>Percepita</div>
                 <div>{metricUnits ? `${data.feelslike_c}°C` : `${data.feelslike_f}°F`}</div>
             </div>

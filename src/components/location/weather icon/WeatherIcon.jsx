@@ -5,7 +5,7 @@ export const WeatherIcon = ({ isNight, conditionData }) => {
     const { data, metricUnits } = useContext(DataContext)
 
     return (
-        <div className='h-100 d-flex flex-column gap-3'>
+        <div className='h-100 d-flex flex-md-column align-items-center align-items-md-start gap-3'>
             <div className='h-100'>
                 <img
                     src={data.current.condition.icon}

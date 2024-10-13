@@ -2,10 +2,15 @@
     background-color: rgba(0, 0, 0, 0.125);
     color: white;
     box-shadow: 0 0 10px black;
+    transition: all 0.2s ease-in-out;
+}
+
+.card-component:hover {
+    transform: scale(105%);
 }
 
 .day-sunny {
-    background-color: rgba(102, 199, 251, 0.7);
+    background-color: rgba(55, 132, 219, 0.7);
     color: white;
 }
 

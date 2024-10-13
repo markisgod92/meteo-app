@@ -9,7 +9,6 @@ export const MeteoApp = () => {
     const { data, isLoading } = useContext(DataContext)
 
     const makeStyle = (timeOfDay, code) => {
-
         for (let condition of Object.keys(styles[timeOfDay])) {
             if (styles[timeOfDay][condition].includes(code)) {
                 console.log(`${timeOfDay}-${condition}`)
