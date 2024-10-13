@@ -4,6 +4,7 @@ import { MeteoData } from "./MeteoData"
 import { DataContext } from "../../context/DataContext"
 import styles from '../../utilities/styles.json'
 import { NavBar } from "../navbar/NavBar"
+import { Footer } from "../footer/Footer"
 
 export const MeteoApp = () => {
     const { data, isLoading } = useContext(DataContext)
@@ -29,6 +30,8 @@ export const MeteoApp = () => {
                     <MeteoData />
                 </div>
             )}
+
+            <Footer />
         </>
     )
 }
