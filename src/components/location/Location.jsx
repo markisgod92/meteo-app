@@ -20,9 +20,9 @@ export const Location = () => {
                         />
                     </Col>
                     <Col xs={12} md={4}>
-                        <div className="text-end d-flex flex-column gap-3">
+                        <div className="text-end d-flex flex-column gap-1">
                             <h2>{data.location.name}</h2>
-                            <h4>{data.location.region} - {data.location.country}</h4>
+                            <h4>{data.location.region ? `${data.location.region} - `: ''}{data.location.country}</h4>
                             <p className="m-0">{formatLat(data.location.lat)} - {formatLon(data.location.lon)}</p>
                             <p className="m-0">{t('top.localDateTime')}: {convertToItaDate(data.localtime)}</p>
                         </div>

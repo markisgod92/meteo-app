@@ -37,7 +37,7 @@ export const SearchBar = () => {
     }
 
     return (
-        <div className="flex-grow-1 position-relative">
+        <div className="order-3 order-md-2 col-12 col-md-auto flex-grow-1 position-relative">
             <Form.Control
                 className="w-100"
                 type="text"
@@ -47,7 +47,7 @@ export const SearchBar = () => {
             />
 
             {queriedCities.length !== 0 && (
-                <Dropdown.Menu show className='position-absolute top-100 w-100'>
+                <Dropdown.Menu show className='position-absolute top-100 w-100 overflow-x-hidden overflow-y-scroll'>
                     {queriedCities.map((city, i) => (
                         <Dropdown.Item
                             key={i}

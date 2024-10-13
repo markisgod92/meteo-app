@@ -30,7 +30,7 @@ export const ForecastData = ({ metricUnits }) => {
     }, []);
 
     return (
-        <div className="pt-3">
+        <div className="px-3 pt-3">
             <Row>
                 <div className="card-component rounded-4 p-4">
                     <Row>

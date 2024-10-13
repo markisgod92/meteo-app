@@ -1,47 +1,47 @@
 {
     "co": [
-      { "maxValue": 4400, "level": "Buona" },
-      { "maxValue": 9400, "level": "Moderata" },
-      { "maxValue": "Infinity", "level": "Nociva" }
+      { "maxValue": 4400, "level": "good" },
+      { "maxValue": 9400, "level": "moderate" },
+      { "maxValue": "Infinity", "level": "harmful" }
     ],
     "no2": [
-      { "maxValue": 50, "level": "Buona" },
-      { "maxValue": 100, "level": "Moderata" },
-      { "maxValue": "Infinity", "level": "Nociva" }
+      { "maxValue": 50, "level": "good" },
+      { "maxValue": 100, "level": "moderate" },
+      { "maxValue": "Infinity", "level": "harmful" }
     ],
     "o3": [
-      { "maxValue": 100, "level": "Buona" },
-      { "maxValue": 160, "level": "Moderata" },
-      { "maxValue": "Infinity", "level": "Nociva" }
+      { "maxValue": 100, "level": "good" },
+      { "maxValue": 160, "level": "moderate" },
+      { "maxValue": "Infinity", "level": "harmful" }
     ],
     "so2": [
-      { "maxValue": 20, "level": "Buona" },
-      { "maxValue": 75, "level": "Moderata" },
-      { "maxValue": "Infinity", "level": "Nociva" }
+      { "maxValue": 20, "level": "good" },
+      { "maxValue": 75, "level": "moderate" },
+      { "maxValue": "Infinity", "level": "harmful" }
     ],
     "pm2_5": [
-      { "maxValue": 25, "level": "Buona" },
-      { "maxValue": 50, "level": "Moderata" },
-      { "maxValue": "Infinity", "level": "Nociva" }
+      { "maxValue": 25, "level": "good" },
+      { "maxValue": 50, "level": "moderate" },
+      { "maxValue": "Infinity", "level": "harmful" }
     ],
     "pm10": [
-      { "maxValue": 50, "level": "Buona" },
-      { "maxValue": 100, "level": "Moderata" },
-      { "maxValue": "Infinity", "level": "Nociva" }
+      { "maxValue": 50, "level": "good" },
+      { "maxValue": 100, "level": "moderate" },
+      { "maxValue": "Infinity", "level": "harmful" }
     ],
     "epa": {
-        "1": "Buona",
-        "2": "Moderata",
-        "3": "Nociva per soggetti a rischio",
-        "4": "Nociva",
-        "5": "Molto nociva",
-        "6": "Pericolosa"
+        "1": "good",
+        "2": "moderate",
+        "3": "harmuflRiskSubjects",
+        "4": "harmful",
+        "5": "veryHarmful",
+        "6": "hazardous"
     },
     "defra": [
-      { "maxValue": 3, "level": "Buona" },
-      { "maxValue": 6, "level": "Moderata" },
-      { "maxValue": 9, "level": "Nociva" },
-      { "maxValue": 10, "level": "Pericolosa" }
+      { "maxValue": 3, "level": "good" },
+      { "maxValue": 6, "level": "moderate" },
+      { "maxValue": 9, "level": "harmful" },
+      { "maxValue": 10, "level": "hazardous" }
     ]
   }
   

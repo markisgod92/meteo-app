@@ -64,6 +64,12 @@
         "no2": "Diossido di azoto",
         "so2": "Diossido di zolfo",
         "epaIndex": "Indice EPA (US)",
-        "defraIndex": "Indice DEFRA (UK)"
+        "defraIndex": "Indice DEFRA (UK)",
+        "good": "Buona",
+        "moderate": "Moderata",
+        "harmful": "Nociva",
+        "harmfulRiskSubjects": "Nociva per soggetti a rischio",
+        "veryHarmful": "Molto nociva",
+        "hazardous": "Pericolosa"
     }
 }

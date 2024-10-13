@@ -12,23 +12,26 @@ export const NavBar = () => {
     return (
         <nav>
             <Container>
-                <div className="d-flex justify-content-between align-items-center gap-5 p-3">
-                    <div>Logo</div>
+                <div className="d-flex flex-wrap justify-content-between align-items-center gap-2 gap-md-5 p-3">
+                    <div className="order-1 col-md-auto">Logo</div>
 
                     <SearchBar />
 
-                    <Dropdown>
-                        <Dropdown.Toggle
-                            variant="secondary-outline"
-                        >
-                            {i18n.language}
-                        </Dropdown.Toggle>
+                    <div className="order-2 order-md-3 col-md-auto">
+                        <Dropdown>
+                            <Dropdown.Toggle
+                                variant="secondary-outline"
+                            >
+                                {i18n.language}
+                            </Dropdown.Toggle>
 
-                        <Dropdown.Menu>
-                            <Dropdown.Item onClick={() => changeLanguage('it')}>Italiano</Dropdown.Item>
-                            <Dropdown.Item onClick={() => changeLanguage('en')}>English</Dropdown.Item>
-                        </Dropdown.Menu>
-                    </Dropdown>
+                            <Dropdown.Menu>
+                                <Dropdown.Item onClick={() => changeLanguage('it')}>Italiano</Dropdown.Item>
+                                <Dropdown.Item onClick={() => changeLanguage('en')}>English</Dropdown.Item>
+                            </Dropdown.Menu>
+                        </Dropdown>
+                    </div>
+
                 </div>
             </Container>
         </nav>

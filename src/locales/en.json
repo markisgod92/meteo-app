@@ -54,6 +54,12 @@
         "no2": "Nitrogen dioxide",
         "so2": "Sulphur dioxide",
         "epaIndex": "EPA Index (US)",
-        "defraIndex": "DEFRA Index (UK)"
+        "defraIndex": "DEFRA Index (UK)",
+        "good": "Good",
+        "moderate": "Moderate",
+        "harmful": "Harmful",
+        "harmfulRiskSubjects": "Harmful to risk subjects",
+        "veryHarmful": "Very harmful",
+        "hazardous": "Hazardous"
     }
 }

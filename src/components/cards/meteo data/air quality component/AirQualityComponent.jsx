@@ -11,7 +11,7 @@ export const AirQualityComponent = ({ data }) => {
 
         for (let i = 0; i < levels.length; i++) {
             if (value <= levels[i].maxValue) {
-                return levels[i].level
+                return t(`airQuality.${levels[i].level}`)
             }
         }
 
@@ -19,7 +19,7 @@ export const AirQualityComponent = ({ data }) => {
     }
 
     const getEPAIndexLevel = (value) => {
-        return airQualityLevels.epa[value] || 'N/A'
+        return t(`airQuality.${airQualityLevels.epa[value]}`) || 'N/A'
     }
 
     return (

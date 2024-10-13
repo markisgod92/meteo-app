@@ -21,7 +21,7 @@ export const MeteoApp = () => {
     }
 
     return (
-        <>
+        <div className="content-div d-flex flex-column justify-content-between">
             <NavBar />
 
             {data && (
@@ -32,6 +32,6 @@ export const MeteoApp = () => {
             )}
 
             <Footer />
-        </>
+        </div>
     )
 }

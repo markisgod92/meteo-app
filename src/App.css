@@ -1,3 +1,7 @@
+.content-div {
+    height: 100dvh
+}
+
 .card-component {
     background-color: rgba(0, 0, 0, 0.125);
     color: white;
