@@ -2,8 +2,8 @@ import { useContext, useEffect, useState } from "react"
 import { Location } from "../location/Location"
 import { MeteoData } from "./MeteoData"
 import { DataContext } from "../../context/DataContext"
-import { SearchBar } from "../searchbar/SearchBar"
 import styles from '../../utilities/styles.json'
+import { NavBar } from "../navbar/NavBar"
 
 export const MeteoApp = () => {
     const { data, isLoading } = useContext(DataContext)
@@ -21,7 +21,7 @@ export const MeteoApp = () => {
 
     return (
         <>
-            <SearchBar />
+            <NavBar />
 
             {data && (
                 <div className={makeStyle(data.isDay ? 'day' : 'night', data.current.condition.code)}>

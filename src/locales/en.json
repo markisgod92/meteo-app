@@ -1,0 +1,13 @@
+{
+    "language": "Language",
+    "searchCity": "Search a city...",
+    "airQuality": "Air quality",
+    "cloudCover": "Cloud cover",
+    "humidity": "Humidity",
+    "precipitations": "Rain",
+    "pressure": "Pressure",
+    "temperature": "Temperature",
+    "uvIndex": "UV Index",
+    "visibility": "Visibility",
+    "wind": "Wind"
+}

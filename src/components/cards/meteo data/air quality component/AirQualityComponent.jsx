@@ -1,7 +1,9 @@
 import { Row, Col } from "react-bootstrap"
 import airQualityLevels from '../../../../utilities/air-quality-levels.json'
+import { useTranslation } from "react-i18next"
 
 export const AirQualityComponent = ({ data }) => {
+    const {t, i18n} = useTranslation()
 
     const getAirQualityLevel = (value, type) => {
         const levels = airQualityLevels[type]
@@ -25,7 +27,7 @@ export const AirQualityComponent = ({ data }) => {
             <Row className="card-component h-100 rounded-4 p-4">
                 <div className="d-flex gap-3 align-items-baseline">
                     <i className="bi bi-lungs fs-3"></i>
-                    <h4>Qualità dell'aria</h4>
+                    <h4>{t('airQuality')}</h4>
                 </div>
 
                 <Col xs={12} md={6}>
