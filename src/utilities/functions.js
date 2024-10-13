@@ -21,10 +21,6 @@ export const formatLon = (lon) => {
     return lon > 0 ? `${lon} E` : `${Math.abs(lon)} W`
 }
 
-export const pressureToText = (metricUnits, value) => {
-    return value >= (metricUnits ? 1013 : 2992) ? 'Alta pressione' : 'Bassa pressione';
-}
-
 export const parseTimeString = (timeString) => {
     if (!timeString || typeof timeString !== 'string') return null;
 

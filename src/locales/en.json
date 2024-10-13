@@ -1,13 +1,59 @@
 {
-    "language": "Language",
-    "searchCity": "Search a city...",
-    "airQuality": "Air quality",
-    "cloudCover": "Cloud cover",
-    "humidity": "Humidity",
-    "precipitations": "Rain",
-    "pressure": "Pressure",
-    "temperature": "Temperature",
-    "uvIndex": "UV Index",
-    "visibility": "Visibility",
-    "wind": "Wind"
+    "top": {
+        "language": "Language",
+        "searchCity": "Search a city",
+        "localDateTime": "Local date and time",
+        "lastUpdate": "Last updated"
+    },
+    "temperatureCard": {
+        "temperature": "Temperature",
+        "feelslike": "Feels like",
+        "windchill": "Windchill"
+    },
+    "windCard": {
+        "wind": "Wind",
+        "speed": "Speed",
+        "gust": "Gusts",
+        "direction": "Direction"
+    },
+    "pressureCard": {
+        "pressure": "Pressure",
+        "highPressure": "High pressure",
+        "lowPressure": "Low pressure"
+    },
+    "humidityCard": {
+        "humidity": "Humidity",
+        "dewpoint": "Dewpoint"
+    },
+    "uvCard": {
+        "uvIndex": "UV Index",
+        "low": "Low",
+        "medium": "Medium",
+        "high": "High",
+        "veryHigh": "Very high",
+        "extreme": "Extremely high"
+    },
+    "singleValueCards": {
+        "rain": "Rain",
+        "cloudCover": "Clouds",
+        "visibility": "Visibility",
+        "meteoAlerts": "Meteo Alerts"
+    },
+    "astronomy": {
+        "sun": "Sun",
+        "moon": "Moon",
+        "rises": "Rise",
+        "sets": "Set",
+        "moonphase": "Moon Phase",
+        "illumination": "Illumination"
+    },
+    "airQuality": {
+        "airQuality": "Air Quality",
+        "co": "Carbon monoxide",
+        "o3": "Ozone",
+        "no2": "Nitrogen dioxide",
+        "so2": "Sulphur dioxide",
+        "epaIndex": "EPA Index (US)",
+        "defraIndex": "DEFRA Index (UK)"
+    }
 }

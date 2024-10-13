@@ -18,8 +18,10 @@ export const NavBar = () => {
                     <SearchBar />
 
                     <Dropdown>
-                        <Dropdown.Toggle>
-                            {t('language')}
+                        <Dropdown.Toggle
+                            variant="secondary-outline"
+                        >
+                            {i18n.language}
                         </Dropdown.Toggle>
 
                         <Dropdown.Menu>

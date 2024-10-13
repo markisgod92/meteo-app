@@ -2,16 +2,18 @@ import { useContext } from "react"
 import { DataContext } from "../../context/DataContext"
 import { Row, Col } from "react-bootstrap"
 import { convertToItaDate } from "../../utilities/functions"
+import { useTranslation } from "react-i18next"
 
 export const AlertSection = () => {
     const { data } = useContext(DataContext)
+    const {t} = useTranslation()
 
     return (
         <Row className="card-component h-100 rounded-4 p-4 mt-3">
             <Col xs={12}>
                 <div className="d-flex gap-3 align-items-baseline">
                     <i className="bi bi-exclamation-diamond fs-3"></i>
-                    <h4>Allerte meteo</h4>
+                    <h4>{t('singleValueCards.meteoAlerts')}</h4>
                 </div>
             </Col>
             <ul className="px-3 pt-3">

@@ -7,9 +7,11 @@ import { ForecastData } from "../sections/ForecastData"
 import { AstronomySection } from "../sections/AstronomySection"
 import { AirQualityComponent } from "../cards/meteo data/air quality component/AirQualityComponent"
 import { AlertSection } from "../sections/AlertSection"
+import { useTranslation } from "react-i18next"
 
 export const MeteoData = () => {
     const { data, metricUnits } = useContext(DataContext)
+    const {t} = useTranslation()
 
     return (
         <Container>
@@ -19,7 +21,7 @@ export const MeteoData = () => {
                     md={6}
                 >
                     <div className="d-flex flex-wrap gap-2">
-                        <div>Ultimo aggiornamento:</div>
+                        <div>{t('top.lastUpdate')}:</div>
                         <div>{data.current.last_updated}</div>
                     </div>
                 </Col>

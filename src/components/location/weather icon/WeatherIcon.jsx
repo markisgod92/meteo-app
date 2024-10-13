@@ -1,21 +1,42 @@
 import { useContext } from "react"
 import { DataContext } from "../../../context/DataContext"
+import { useTranslation } from "react-i18next"
+import multilingualConditions from '../../../utilities/multilingualConditions.json'
 
 export const WeatherIcon = ({ isNight, conditionData }) => {
     const { data, metricUnits } = useContext(DataContext)
+    const { i18n } = useTranslation()
+
+    const getConditionText = (code) => {
+        const currentLang = i18n.language
+
+        for (const condition of multilingualConditions) {
+            if (condition.code === code) {
+                if (currentLang === 'en') {
+                    return data.isDay ? condition.day : condition.night
+                } else {
+                    for (const lang of condition.languages) {
+                        if (lang.lang_iso === currentLang) {
+                            return data.isDay ? lang.day_text : lang.night_text
+                        }
+                    }
+                }
+            }
+        }
+    }
 
     return (
         <div className='h-100 d-flex flex-md-column align-items-center align-items-md-start gap-3'>
             <div className='h-100'>
                 <img
                     src={data.current.condition.icon}
-                    alt={data.current.condition.text}
+                    alt={getConditionText(data.current.condition.code)}
                     className='h-100 object-fit-cover'
                 />
             </div>
             <div className="d-flex align-items-baseline gap-4">
                 <div className="fs-3">{metricUnits ? `${data.current.temp_c}°C` : `${data.current.temp_f}°F`}</div>
-                <h3>{data.current.condition.text}</h3>
+                <h3>{getConditionText(data.current.condition.code)}</h3>
             </div>
 
         </div>

@@ -27,12 +27,12 @@ export const AirQualityComponent = ({ data }) => {
             <Row className="card-component h-100 rounded-4 p-4">
                 <div className="d-flex gap-3 align-items-baseline">
                     <i className="bi bi-lungs fs-3"></i>
-                    <h4>{t('airQuality')}</h4>
+                    <h4>{t('airQuality.airQuality')}</h4>
                 </div>
 
                 <Col xs={12} md={6}>
                     <div className="d-flex justify-content-between align-items-center py-3 border-bottom border-1">
-                        <div>Monossido di Carbonio</div>
+                        <div>{t('airQuality.co')}</div>
                         <div className="d-flex justify-content-end gap-3">
                             <div>{data.co} μg/m3</div>
                             <div>{getAirQualityLevel(data.co, 'co')}</div>
@@ -41,7 +41,7 @@ export const AirQualityComponent = ({ data }) => {
                 </Col>
                 <Col xs={12} md={6}>
                     <div className="d-flex justify-content-between align-items-center py-3 border-bottom border-1">
-                        <div>Ozono</div>
+                        <div>{t('airQuality.o3')}</div>
                         <div className="d-flex justify-content-end gap-3">
                             <div>{data.no2} μg/m3</div>
                             <div>{getAirQualityLevel(data.no2, 'no2')}</div>
@@ -50,7 +50,7 @@ export const AirQualityComponent = ({ data }) => {
                 </Col>
                 <Col xs={12} md={6}>
                     <div className="d-flex justify-content-between align-items-center py-3 border-bottom border-1">
-                        <div>Diossido di Azoto</div>
+                        <div>{t('airQuality.no2')}</div>
                         <div className="d-flex justify-content-end gap-3">
                             <div>{data.o3} μg/m3</div>
                             <div>{getAirQualityLevel(data.o3, 'o3')}</div>
@@ -59,7 +59,7 @@ export const AirQualityComponent = ({ data }) => {
                 </Col>
                 <Col xs={12} md={6}>
                     <div className="d-flex justify-content-between align-items-center py-3 border-bottom border-1">
-                        <div>Diossido di Zolfo</div>
+                        <div>{t('airQuality.so2')}</div>
                         <div className="d-flex justify-content-end gap-3">
                             <div>{data.so2} μg/m3</div>
                             <div>{getAirQualityLevel(data.so2, 'so2')}</div>
@@ -86,13 +86,13 @@ export const AirQualityComponent = ({ data }) => {
                 </Col>
                 <Col xs={6}>
                     <div className="d-flex flex-column flex-md-row justify-content-between align-items-center py-3">
-                        <div>Indice EPA (US)</div>
+                        <div>{t('airQuality.epaIndex')}</div>
                         <div className="fw-bold">{getEPAIndexLevel(data['us-epa-index'])}</div>
                     </div>
                 </Col>
                 <Col xs={6}>
                     <div className="d-flex flex-column flex-md-row justify-content-between align-items-center py-3">
-                        <div>Indice DEFRA (UK)</div>
+                        <div>{t('airQuality.defraIndex')}</div>
                         <div className="fw-bold">{getAirQualityLevel(data['gb-defra-index'], 'defra')}</div>
                     </div>
                 </Col>

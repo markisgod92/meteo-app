@@ -1,13 +1,69 @@
 {
-    "language": "Lingua",
-    "searchCity": "Cerca una città...",
-    "airQuality": "Qualità dell'aria",
-    "cloudCover": "Nuvolosità",
-    "humidity": "Umidità",
-    "precipitations": "Precipitazioni",
-    "pressure": "Pressione atmosferica",
-    "temperature": "Temperatura",
-    "uvIndex": "Indice UV",
-    "visibility": "Visibilità",
-    "wind": "Vento"
+    "top": {
+        "language": "Lingua",
+        "searchCity": "Cerca una città",
+        "localDateTime": "Data e ora locali",
+        "lastUpdate": "Ultimo aggiornamento"
+    },
+    "temperatureCard": {
+        "temperature": "Temperatura",
+        "feelslike": "Percepita",
+        "windchill": "Windchill"
+    },
+    "windCard": {
+        "wind": "Vento",
+        "speed": "Velocità",
+        "gust": "Folate",
+        "direction": "Direzione"
+    },
+    "pressureCard": {
+        "pressure": "Pressione",
+        "highPressure": "Alta pressione",
+        "lowPressure": "Bassa pressione"
+    },
+    "humidityCard": {
+        "humidity": "Umidità",
+        "dewpoint": "Punto di rugiada"
+    },
+    "uvCard": {
+        "uvIndex": "Indice UV",
+        "low": "Basso",
+        "medium": "Medio",
+        "high": "Alto",
+        "veryHigh": "Molto alto",
+        "extreme": "Estremamente alto"
+    },
+    "singleValueCards": {
+        "rain": "Precipitazioni",
+        "cloudCover": "Nuvolosità",
+        "visibility": "Visibilità",
+        "meteoAlerts": "Allerte Meteo"
+    },
+    "astronomy": {
+        "sun": "Sole",
+        "moon": "Luna",
+        "rises": "Sorge",
+        "sets": "Tramonta",
+        "moonphase": "Fase Lunare",
+        "illumination": "Illuminazione"
+    },
+    "moonphases": {
+        "New Moon": "Luna Nuova",
+        "Waxing Crescent": "Crescente",
+        "First Quarter": "Primo Quarto",
+        "Waxing Gibbous": "Gibbosa Crescente",
+        "Full Moon": "Luna Piena",
+        "Waning Gibbous": "Gibbosa Calante",
+        "Last Quarter": "Ultimo Quarto",
+        "Waning Crescent": "Crescente Calante"
+    },
+    "airQuality": {
+        "airQuality": "Qualità dell'aria",
+        "co": "Monossido di carbonio",
+        "o3": "Ozono",
+        "no2": "Diossido di azoto",
+        "so2": "Diossido di zolfo",
+        "epaIndex": "Indice EPA (US)",
+        "defraIndex": "Indice DEFRA (UK)"
+    }
 }

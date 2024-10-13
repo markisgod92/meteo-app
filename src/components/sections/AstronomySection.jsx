@@ -3,9 +3,11 @@ import { CelestialComponent } from "../cards/celestial component/CelestialCompon
 import { LunarPhaseComponent } from "../cards/lunar phase component/LunarPhaseComponent"
 import { DataContext } from "../../context/DataContext"
 import { Row, Col } from "react-bootstrap"
+import { useTranslation } from "react-i18next"
 
 export const AstronomySection = () => {
     const { data } = useContext(DataContext)
+    const {t} = useTranslation()
 
     return (
         <Row className="pt-3 g-3">
@@ -15,7 +17,7 @@ export const AstronomySection = () => {
                 lg={4}
             >
                 <CelestialComponent
-                    title={'Sole'}
+                    title={t('astronomy.sun')}
                     icon={'sun'}
                     riseTime={data.astronomy.sunrise}
                     setTime={data.astronomy.sunset}
@@ -27,7 +29,7 @@ export const AstronomySection = () => {
                 lg={4}
             >
                 <CelestialComponent
-                    title={'Luna'}
+                    title={t('astronomy.moon')}
                     icon={'moon'}
                     riseTime={data.astronomy.moonrise}
                     setTime={data.astronomy.moonset}

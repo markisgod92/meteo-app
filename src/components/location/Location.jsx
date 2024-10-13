@@ -3,9 +3,11 @@ import { WeatherIcon } from "./weather icon/WeatherIcon"
 import { useContext } from "react"
 import { DataContext } from "../../context/DataContext"
 import { convertToItaDate, formatLat, formatLon } from "../../utilities/functions"
+import { useTranslation } from "react-i18next"
 
 export const Location = () => {
     const { data } = useContext(DataContext)
+    const {t} = useTranslation()
 
     return (
         <section>
@@ -22,7 +24,7 @@ export const Location = () => {
                             <h2>{data.location.name}</h2>
                             <h4>{data.location.region} - {data.location.country}</h4>
                             <p className="m-0">{formatLat(data.location.lat)} - {formatLon(data.location.lon)}</p>
-                            <p className="m-0">Data e ora locali: {convertToItaDate(data.localtime)}</p>
+                            <p className="m-0">{t('top.localDateTime')}: {convertToItaDate(data.localtime)}</p>
                         </div>
                     </Col>
                 </Row>

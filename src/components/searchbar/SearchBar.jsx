@@ -41,7 +41,7 @@ export const SearchBar = () => {
             <Form.Control
                 className="w-100"
                 type="text"
-                placeholder={t('searchCity')}
+                placeholder={t('top.searchCity')}
                 value={cityInput}
                 onChange={(e) => handleCityInput(e)}
             />

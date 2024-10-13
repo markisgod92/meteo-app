@@ -7,22 +7,22 @@ export const UnitsSwitch = () => {
 
     return (
         <div
-            className="switch-container d-flex bg-dark align-items-center rounded-3 w-auto h-auto"
+            className="switch-container d-flex bg-dark-subtle align-items-center rounded-3 w-auto h-auto"
             onClick={switchUnits}
         >
             <div 
-                className={`p-2 rounded-3 d-flex justify-content-center align-items-center ${
+                className={`px-3 py-1 rounded-3 d-flex justify-content-center align-items-center ${
                     metricUnits ? "bg-secondary-subtle text-dark border border-3 border-dark" : "text-white"
                 }`}
             >
-                <div>metric</div>
+                <div>SI</div>
             </div>
             <div 
-                className={`p-2 rounded-3 d-flex justify-content-center align-items-center ${
+                className={`px-3 py-1 rounded-3 d-flex justify-content-center align-items-center ${
                     metricUnits ? "text-white" : "bg-secondary-subtle text-dark border border-3 border-dark"
                 }`}
             >
-                <div>cheeseburgers</div>
+                <div>US</div>
             </div>
         </div>
     )
