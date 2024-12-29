@@ -1,7 +1,3 @@
-.content-div {
-    height: 100dvh
-}
-
 .card-component {
     background-color: rgba(0, 0, 0, 0.125);
     color: white;
@@ -10,7 +6,7 @@
 }
 
 .card-component:hover {
-    transform: scale(105%);
+    scale: 1.02;
 }
 
 .day-sunny {

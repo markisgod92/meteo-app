@@ -32,7 +32,7 @@
     "epa": {
         "1": "good",
         "2": "moderate",
-        "3": "harmuflRiskSubjects",
+        "3": "harmfulRiskSubjects",
         "4": "harmful",
         "5": "veryHarmful",
         "6": "hazardous"

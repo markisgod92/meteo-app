@@ -61,5 +61,8 @@
         "harmfulRiskSubjects": "Harmful to risk subjects",
         "veryHarmful": "Very harmful",
         "hazardous": "Hazardous"
+    },
+    "utils": {
+        "error": "Error loading data."
     }
 }

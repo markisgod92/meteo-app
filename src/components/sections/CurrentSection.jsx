@@ -14,48 +14,55 @@ export const CurrentSection = ({ metricUnits }) => {
     const { data } = useContext(DataContext)
 
     return (
-        <Row className="pt-3 g-3">
-            <Col xs={12} md={6} lg={3}>
+        <Row xs={2} lg={4} className="pt-3 g-3">
+            <Col>
                 <TemperatureComponent
                     metricUnits={metricUnits}
                     data={data.current}
                 />
             </Col>
-            <Col xs={12} md={6} lg={3}>
+
+            <Col>
                 <WindComponent
                     metricUnits={metricUnits}
                     data={data.current}
                 />
             </Col>
-            <Col xs={6} md={4} lg={3}>
+
+            <Col>
                 <PrecipitationsComponent
                     metricUnits={metricUnits}
                     data={data.current}
                 />
             </Col>
-            <Col xs={6} md={4} lg={3}>
+
+            <Col>
                 <PressureComponent
                     metricUnits={metricUnits}
                     data={data.current}
                 />
             </Col>
-            <Col xs={12} md={4} lg={3}>
+
+            <Col>
                 <HumidityComponent
                     metricUnits={metricUnits}
                     data={data.current}
                 />
             </Col>
-            <Col xs={12} md={4} lg={3}>
+
+            <Col>
                 <UvIndexComponent
                     data={data.current}
                 />
             </Col>
-            <Col xs={6} md={4} lg={3}>
+
+            <Col>
                 <CloudComponent
                     data={data.current}
                 />
             </Col>
-            <Col xs={6} md={4} lg={3}>
+
+            <Col>
                 <VisibilityComponent
                     metricUnits={metricUnits}
                     data={data.current}

@@ -71,5 +71,8 @@
         "harmfulRiskSubjects": "Nociva per soggetti a rischio",
         "veryHarmful": "Molto nociva",
         "hazardous": "Pericolosa"
+    },
+    "utils": {
+        "error": "Errore nel caricamento dei dati."
     }
 }

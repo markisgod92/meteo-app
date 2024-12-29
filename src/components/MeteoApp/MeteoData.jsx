@@ -11,7 +11,7 @@ import { useTranslation } from "react-i18next"
 
 export const MeteoData = () => {
     const { data, metricUnits } = useContext(DataContext)
-    const {t} = useTranslation()
+    const { t } = useTranslation()
 
     return (
         <Container>
@@ -40,15 +40,16 @@ export const MeteoData = () => {
             {data.alerts.length > 0 && (
                 <AlertSection />
             )}
-            
+
             <CurrentSection metricUnits={metricUnits} />
 
             <ForecastData metricUnits={metricUnits} />
 
             <AstronomySection />
 
-            <AirQualityComponent data={data.current.air_quality}/>
-            
+            <AirQualityComponent data={data.current.air_quality} />
+
+
         </Container>
     )
 }

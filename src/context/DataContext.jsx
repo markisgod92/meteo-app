@@ -4,8 +4,11 @@ export const DataContext = createContext()
 
 export const DataContextProvider = ({ children }) => {
     const [queriedCities, setQueriedCities] = useState([])
+    const [isLoadingCities, setLoadingCities] = useState(false)
+    const [isSearchFailed, setSearchFailed] = useState(false)
     const [data, setData] = useState(null)
     const [isLoading, setLoading] = useState(false)
+    const [isFailed, setFailed] = useState(false)
     const [metricUnits, setMetricUnits] = useState(true)
 
     const API_KEY = import.meta.env.VITE_API_KEY
@@ -18,16 +21,22 @@ export const DataContextProvider = ({ children }) => {
     }
 
     const searchCity = async (query) => {
+        setSearchFailed(false)
+        setLoadingCities(true)
+
         try {
             const response = await fetch(searchURL + query)
             const data = await response.json()
             setQueriedCities(data)
         } catch (error) {
-            console.error('Search city error', error)
+            setSearchFailed(true)
+        } finally {
+            setLoadingCities(false)
         }
     }
 
     const fetchData = async (location) => {
+        setFailed(false)
         setLoading(true)
 
         try {
@@ -52,7 +61,7 @@ export const DataContextProvider = ({ children }) => {
 
             setData(combinedData)
         } catch (error) {
-            console.error('Fetching error', error)
+            setFailed(true)
         } finally {
             setLoading(false)
         }
@@ -60,7 +69,7 @@ export const DataContextProvider = ({ children }) => {
 
     return (
         <DataContext.Provider
-            value={{ searchCity, setQueriedCities, queriedCities, data, fetchData, isLoading, metricUnits, switchUnits }}
+            value={{ searchCity, setQueriedCities, queriedCities, isLoadingCities, isSearchFailed, data, fetchData, isLoading, isFailed, metricUnits, switchUnits }}
         >
             {children}
         </DataContext.Provider>

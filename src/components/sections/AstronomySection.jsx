@@ -11,11 +11,7 @@ export const AstronomySection = () => {
 
     return (
         <Row className="pt-3 g-3">
-            <Col
-                xs={12}
-                md={4}
-                lg={4}
-            >
+            <Col xs={6} lg={4}>
                 <CelestialComponent
                     title={t('astronomy.sun')}
                     icon={'sun'}
@@ -23,11 +19,8 @@ export const AstronomySection = () => {
                     setTime={data.astronomy.sunset}
                 />
             </Col>
-            <Col
-                xs={12}
-                md={4}
-                lg={4}
-            >
+
+            <Col xs={6} lg={4}>
                 <CelestialComponent
                     title={t('astronomy.moon')}
                     icon={'moon'}
@@ -35,10 +28,8 @@ export const AstronomySection = () => {
                     setTime={data.astronomy.moonset}
                 />
             </Col>
-            <Col
-                xs
-                md={4}
-            >
+
+            <Col xs={12} lg={4}>
                 <LunarPhaseComponent
                     data={data}
                 />

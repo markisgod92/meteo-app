@@ -1,13 +1,15 @@
-import { useContext, useState } from "react"
-import { Container, Form, Row, Button, Dropdown } from "react-bootstrap"
+import { useContext, useRef, useState } from "react"
+import { Container, Form, Row, Button, Dropdown, Spinner } from "react-bootstrap"
 import { DataContext } from "../../context/DataContext"
 import { useTranslation } from "react-i18next"
 
 export const SearchBar = () => {
     const [cityInput, setCityInput] = useState('')
-    const { searchCity, queriedCities, setQueriedCities, fetchData } = useContext(DataContext)
+    const [isExpanded, setExpanded] = useState(false)
+    const { searchCity, queriedCities, setQueriedCities, isLoadingCities, isSearchFailed, fetchData } = useContext(DataContext)
+    const blurTimer = useRef(null)
     const [debounceTimer, setDebounceTimer] = useState(null)
-    const { t, i18n } = useTranslation()
+    const { t } = useTranslation()
 
     const debounceSearch = (inputValue) => {
         if (debounceTimer) {
@@ -23,6 +25,18 @@ export const SearchBar = () => {
         setDebounceTimer(newTimer)
     }
 
+    const handleFocus = () => setExpanded(true)
+
+    const handleBlur = () => {
+        if(blurTimer.current) {
+            clearTimeout(blurTimer.current)
+        }
+
+        blurTimer.current = setTimeout(() => {
+            setQueriedCities([])
+            setExpanded(false)
+        }, 100)
+    }
 
     const handleCityInput = (e) => {
         const value = e.target.value
@@ -31,9 +45,9 @@ export const SearchBar = () => {
     }
 
     const showData = (value) => {
+        fetchData(value)
         setQueriedCities([])
         setCityInput('')
-        fetchData(value)
     }
 
     return (
@@ -42,32 +56,45 @@ export const SearchBar = () => {
                 className="w-100"
                 type="text"
                 placeholder={t('top.searchCity')}
+                onFocus={handleFocus}
+                onBlur={handleBlur}
                 value={cityInput}
                 onChange={(e) => handleCityInput(e)}
+                autoComplete='off'
             />
 
-            {queriedCities.length !== 0 && (
-                <Dropdown.Menu show className='position-absolute top-100 w-100 overflow-x-hidden overflow-y-scroll'>
-                    {queriedCities.map((city, i) => (
-                        <Dropdown.Item
-                            key={i}
-                            onClick={() => showData(city.url)}
-                        >
-                            <ul className="city-results d-flex gap-2 list-unstyled m-0 py-1">
-                                <li>{city.name}</li>
-                                {city.region && (
-                                    <>
-                                        <li>-</li>
-                                        <li>{city.region}</li>
-                                    </>
-                                )}
-                                <li>-</li>
-                                <li>{city.country}</li>
-                            </ul>
+            {isExpanded && (
+                <>
+                    <Dropdown.Menu show className='position-absolute top-100 w-100 overflow-x-hidden overflow-y-scroll'>
+                        {isLoadingCities && !isSearchFailed &&(
+                            <Spinner animation="border" size="sm" role="status" className='ms-3' variant="primary"/>
+                        )}
 
-                        </Dropdown.Item>
-                    ))}
-                </Dropdown.Menu>
+                        {!isLoadingCities && isSearchFailed && (
+                            <span className="p-3">{t('utils.error')}</span>
+                        )}
+
+                        {!isLoadingCities && !isSearchFailed && queriedCities && queriedCities.map((city, i) => (
+                            <Dropdown.Item
+                                key={i}
+                                onClick={() => showData(city.url)}
+                            >
+                                <ul className="city-results d-flex gap-2 list-unstyled m-0 py-1">
+                                    <li>{city.name}</li>
+                                    {city.region && (
+                                        <>
+                                            <li>-</li>
+                                            <li>{city.region}</li>
+                                        </>
+                                    )}
+                                    <li>-</li>
+                                    <li>{city.country}</li>
+                                </ul>
+
+                            </Dropdown.Item>
+                        ))}
+                    </Dropdown.Menu>
+                </>
             )}
         </div>
     )

@@ -12,14 +12,12 @@ export const Location = () => {
     return (
         <section>
             <Container>
-                <Row className="py-3 flex-column-reverse flex-md-row">
-                    <Col xs={12} md={8}>
-                        <WeatherIcon
-                            isNight={!data.isDay}
-                            conditionData={data.current.condition}
-                        />
+                <Row className="py-3">
+                    <Col xs={6}>
+                        <WeatherIcon/>
                     </Col>
-                    <Col xs={12} md={4}>
+
+                    <Col xs={6}>
                         <div className="text-end d-flex flex-column gap-1">
                             <h2>{data.location.name}</h2>
                             <h4>{data.location.region ? `${data.location.region} - `: ''}{data.location.country}</h4>

@@ -30,8 +30,8 @@ export const ForecastData = ({ metricUnits }) => {
     }, []);
 
     return (
-        <div className="px-3 pt-3">
-            <Row>
+        <Row className="pt-3">
+            <Col xs={12}>
                 <div className="card-component rounded-4 p-4">
                     <Row>
                         {data.today.map((item, index) => {
@@ -46,7 +46,7 @@ export const ForecastData = ({ metricUnits }) => {
                         })}
                     </Row>
                 </div>
-            </Row>
-        </div>
+            </Col>
+        </Row>
     );
 };

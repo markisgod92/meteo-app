@@ -9,6 +9,11 @@ export const NavBar = () => {
         i18n.changeLanguage(lng)
     }
 
+    const flags = {
+        it: '🇮🇹',
+        en: '🇬🇧'
+    }
+
     return (
         <nav>
             <Container>
@@ -22,12 +27,12 @@ export const NavBar = () => {
                             <Dropdown.Toggle
                                 variant="secondary-outline"
                             >
-                                {i18n.language}
+                                {flags[i18n.language]}
                             </Dropdown.Toggle>
 
                             <Dropdown.Menu>
-                                <Dropdown.Item onClick={() => changeLanguage('it')}>Italiano</Dropdown.Item>
-                                <Dropdown.Item onClick={() => changeLanguage('en')}>English</Dropdown.Item>
+                                <Dropdown.Item onClick={() => changeLanguage('it')}>{flags.it}</Dropdown.Item>
+                                <Dropdown.Item onClick={() => changeLanguage('en')}>{flags.en}</Dropdown.Item>
                             </Dropdown.Menu>
                         </Dropdown>
                     </div>
