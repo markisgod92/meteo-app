@@ -1,8 +1,7 @@
 # SimplyMeteo
-Academic project
 
 ## Description
-SimplyMeteo is a simple, dashboard-style weather application that uses [WeatherAPI](https://www.weatherapi.com/) to display current weather data and a daily forecast for the specified location.
+SimplyMeteo is a simple, dashboard-style weather application that I made as an academic project. It uses [WeatherAPI](https://www.weatherapi.com/) to display current weather data and a daily forecast for the specified location.
 
 **Features**:
 - multi-language (Italian, English)
@@ -19,7 +18,6 @@ SimplyMeteo is a simple, dashboard-style weather application that uses [WeatherA
 
 ## Screenshots
 ![screenshot1](/screenshots/Screenshot%202024-12-30%20alle%2018.44.09.png)
-
 ![screenshot2](/screenshots/Screenshot%202024-12-30%20alle%2018.44.14.png)
 
 
@@ -57,4 +55,4 @@ SimplyMeteo is a simple, dashboard-style weather application that uses [WeatherA
 
 
 ## Demo
-(coming soon)
+SimplyMeteo is deployed on Vercel: [simplymeteo.vercel.app](https://simplymeteo.vercel.app/)
