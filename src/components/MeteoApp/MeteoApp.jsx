@@ -7,6 +7,7 @@ import { NavBar } from "../navbar/NavBar"
 import { Footer } from "../footer/Footer"
 import { Spinner } from "react-bootstrap"
 import { useTranslation } from "react-i18next"
+import { Welcome } from "../welcome/Welcome"
 
 export const MeteoApp = () => {
     const { data, isLoading, isFailed } = useContext(DataContext)
@@ -27,6 +28,10 @@ export const MeteoApp = () => {
             <NavBar />
 
             <div className={data && makeStyle(data.isDay ? 'day' : 'night', data.current.condition.code)}>
+                {!isLoading && !isFailed && !data && (
+                    <Welcome />
+                )}
+
                 {isLoading && !isFailed && (
                     <div className="h-100 d-flex justify-content-center align-items-center">
                         <Spinner animation="grow" role="status" variant="primary" />

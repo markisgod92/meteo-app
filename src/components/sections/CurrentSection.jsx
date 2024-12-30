@@ -14,7 +14,7 @@ export const CurrentSection = ({ metricUnits }) => {
     const { data } = useContext(DataContext)
 
     return (
-        <Row xs={2} lg={4} className="pt-3 g-3">
+        <Row xs={1} sm={2} lg={4} className="pt-3 g-3">
             <Col>
                 <TemperatureComponent
                     metricUnits={metricUnits}

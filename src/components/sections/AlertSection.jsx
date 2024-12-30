@@ -1,12 +1,17 @@
-import { useContext } from "react"
+import { useContext, useState } from "react"
 import { DataContext } from "../../context/DataContext"
-import { Row, Col } from "react-bootstrap"
+import { Row, Col, Button } from "react-bootstrap"
 import { convertToItaDate } from "../../utilities/functions"
 import { useTranslation } from "react-i18next"
 
 export const AlertSection = () => {
     const { data } = useContext(DataContext)
     const { t } = useTranslation()
+    const [isExpanded, setExpanded] = useState(false)
+
+    const toggleExpanded = () => setExpanded(prev => !prev)
+
+    const alertsList = isExpanded ? data.alerts : data.alerts.slice(0, 2)
 
     return (
         <Row className="pt-3">
@@ -18,10 +23,10 @@ export const AlertSection = () => {
                     </div>
 
                     <ul>
-                        {data.alerts.map((alert, i) => (
+                        {alertsList.map((alert, i) => (
                             <li key={i} className="pt-3">
                                 <div className="d-flex flex-column gap-1">
-                                    <div className="d-flex justify-content-between">
+                                    <div className="d-flex justify-content-between flex-wrap">
                                         <h6>{alert.headline}</h6>
                                         <div>{alert.severity}</div>
                                     </div>
@@ -32,6 +37,14 @@ export const AlertSection = () => {
                             </li>
                         ))}
                     </ul>
+
+                    {data.alerts.length > 2 && (
+                        <div className="text-end">
+                        <Button variant="link" className="text-light" onClick={toggleExpanded}>
+                            {isExpanded ? t('utils.showLess') : `${t('utils.showMore')} (${data.alerts.length - 2})`}
+                        </Button>
+                        </div>
+                    )}
                 </div>
             </Col>
         </Row>

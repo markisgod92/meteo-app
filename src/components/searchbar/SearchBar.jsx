@@ -51,7 +51,7 @@ export const SearchBar = () => {
     }
 
     return (
-        <div className="order-3 order-md-2 col-12 col-md-auto flex-grow-1 position-relative">
+        <div className="w-100 position-relative">
             <Form.Control
                 className="w-100"
                 type="text"

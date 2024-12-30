@@ -35,7 +35,7 @@ export const WeatherIcon = () => {
                 />
             </div>
 
-            <div className="d-flex align-items-baseline gap-4">
+            <div className="d-flex flex-wrap align-items-baseline gap-4">
                 <div className="fs-3">{metricUnits ? `${data.current.temp_c}°C` : `${data.current.temp_f}°F`}</div>
                 <h3>{getConditionText(data.current.condition.code)}</h3>
             </div>

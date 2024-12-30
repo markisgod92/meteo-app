@@ -9,6 +9,12 @@
     scale: 1.02;
 }
 
+@media screen and (max-width: 792px) {
+    .card-component h4 {
+        font-size: 17px !important;
+    }
+}
+
 .day-sunny {
     background-color: rgba(55, 132, 219, 0.7);
     color: white;

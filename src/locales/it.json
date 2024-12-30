@@ -73,6 +73,10 @@
         "hazardous": "Pericolosa"
     },
     "utils": {
-        "error": "Errore nel caricamento dei dati."
-    }
+        "showMore": "Mostra di più",
+        "showLess": "Mostra di meno",
+        "error": "Errore nel caricamento dei dati.",
+        "madeBy": "Progettato e realizzato da"
+    },
+    "welcome": "Benvenuto! Questo progetto, ispirato al design dell'app meteo di Apple, fa parte del mio portfolio di web development. È stato creato per esercitarmi nell'integrazione di API e nella visualizzazione dei dati con React. Esplora un'interfaccia pulita e intuitiva, pensata per offrire un'esperienza semplice e moderna."
 }

@@ -63,6 +63,10 @@
         "hazardous": "Hazardous"
     },
     "utils": {
-        "error": "Error loading data."
-    }
+        "showMore": "Show more",
+        "showLess": "Show less",
+        "error": "Error loading data.",
+        "madeBy": "Made by"
+    },
+    "welcome": "Welcome! This project, inspired by the design of Apple's Weather app, is part of my web development portfolio. It was created to practice API integration and data visualization using React. Explore a clean and intuitive interface designed to provide a simple and modern experience."
 }

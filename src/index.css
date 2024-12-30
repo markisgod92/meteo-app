@@ -1,6 +1,8 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 
-html, body, #root {
+html,
+body,
+#root {
     height: 100%;
     overflow-x: hidden;
 }
@@ -8,4 +10,10 @@ html, body, #root {
 #root {
     display: grid;
     grid-template-rows: auto 1fr auto;
+}
+
+@media screen and (min-width: 992px) {
+    .row-cols-lg-8>* {
+        width: 12.5%;
+    }
 }

@@ -33,7 +33,7 @@ export const ForecastData = ({ metricUnits }) => {
         <Row className="pt-3">
             <Col xs={12}>
                 <div className="card-component rounded-4 p-4">
-                    <Row>
+                    <Row className="gy-5" xs={2} sm={6} lg={8}>
                         {data.today.map((item, index) => {
                             if (index % interval === 0) {
                                 return (
