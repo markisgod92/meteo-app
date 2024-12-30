@@ -12,9 +12,9 @@ export const DataContextProvider = ({ children }) => {
     const [metricUnits, setMetricUnits] = useState(true)
 
     const API_KEY = import.meta.env.VITE_API_KEY
-    const searchURL = `http://api.weatherapi.com/v1//search.json?key=${API_KEY}&lang=it&q=`
-    const forecastURL = `http://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&aqi=yes&alerts=yes&lang=it&q=`
-    const astronomyURL = `http://api.weatherapi.com/v1/astronomy.json?key=${API_KEY}&lang=it&q=`
+    const searchURL = `https://api.weatherapi.com/v1//search.json?key=${API_KEY}&lang=it&q=`
+    const forecastURL = `https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&aqi=yes&alerts=yes&lang=it&q=`
+    const astronomyURL = `https://api.weatherapi.com/v1/astronomy.json?key=${API_KEY}&lang=it&q=`
 
     const switchUnits = () => {
         setMetricUnits(prev => !prev)
